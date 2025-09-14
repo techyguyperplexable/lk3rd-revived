@@ -6,6 +6,9 @@ And it gets even better...
 ## NOTICE
 This bootloader is no longer actively being developed as Igor and I (halal-beef) no longer have devices nor the motivation to develop this further.
 
+## INFO
+I dont have experience doing this, so expect minimal updates from me (objectfigure) , i only own one device so one or two may fall through the cracks
+
 ## What?!
 It's a lot of things.
 * a bootloader (duh?)
