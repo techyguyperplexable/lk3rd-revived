@@ -139,7 +139,7 @@ void draw_menu(enum action current_action)
 	draw_circle(warning_x + warning_width / 2 - warning_thickness / 2, warning_y + warning_height * 27 / 36, warning_thickness / 2, FONT_BLACK); //						 .
 
 	update_y_pos(LCD_HEIGHT * .64);
-	print_lcd_update(FONT_RED, FONT_BLACK, "lk3rd FastBoot Mode", MAX_NUM_CHAR_PER_LINE);
+	print_lcd_update(FONT_RED, FONT_BLACK, "lk3rd-Revived FastBoot Mode", MAX_NUM_CHAR_PER_LINE);
 	update_y_pos(LCD_HEIGHT * .66);
 
 	print_lcd_update(FONT_WHITE, FONT_BLACK, "Product name: %s", TARGET);
@@ -171,10 +171,10 @@ void draw_menu(enum action current_action)
 	}
 
 	orig_y_pos = get_y_pos();
-	print_lcd_update(FONT_WHITE, FONT_BLACK, "Lk3rd production build: ");
+	print_lcd_update(FONT_WHITE, FONT_BLACK, "lk3rd-revived production build: ");
 	update_y_pos(orig_y_pos);
 
-	print_lcd_update(FONT_RED,   FONT_BLACK, empty_pad_string(strlen("Lk3rd production build: "), "no"));
+	print_lcd_update(FONT_RED,   FONT_BLACK, empty_pad_string(strlen("lk3rd-revived production build: "), "no"));
 
 	print_lcd_update(FONT_WHITE, FONT_BLACK, "DRAM: %lldGB %s %s", dram_info.ram_size, dram_info.ram_manufacturer, dram_info.ram_type);
 	print_lcd_update(FONT_WHITE, FONT_BLACK, "UFS: %iGB %s", ufs_info.ufs_size, title_case(ufs_info.ufs_manufacturer));
