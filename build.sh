@@ -118,7 +118,7 @@ if [[ " ${boards[@]} " =~ " $board " ]]; then
 	fi
 
 	mv build-$board build/$board/
-	mv boot-$board.img build/$board/lk3rd-$board.img
+	mv boot-$board.img build/$board/lk3rd-revived-$board.img
 	
 	popd > /dev/null
 elif [[ "$board" == "all" ]]; then
@@ -137,9 +137,9 @@ elif [[ "$board" == "all" ]]; then
 			"${BASH_SOURCE[0]}" ${args[@]} || exit 1
 
 			mkdir -p "$(dirname "${BASH_SOURCE[0]}")/build/all/"
-			ln -s "$(realpath "$(dirname "${BASH_SOURCE[0]}")/build/$b/lk3rd-$b.img")" "$(realpath "$(dirname "${BASH_SOURCE[0]}")/build/all/lk3rd-$b.img")"
+			ln -s "$(realpath "$(dirname "${BASH_SOURCE[0]}")/build/$b/lk3rd-revived-$b.img")" "$(realpath "$(dirname "${BASH_SOURCE[0]}")/build/all/lk3rd-revived-$b.img")"
 			if [[ $tarball == true ]]; then
-				ln -s "$(realpath "$(dirname "${BASH_SOURCE[0]}")/build/$b/lk3rd-$b.tar")" "$(realpath "$(dirname "${BASH_SOURCE[0]}")/build/all/lk3rd-$b.tar")"
+				ln -s "$(realpath "$(dirname "${BASH_SOURCE[0]}")/build/$b/lk3rd-revived-$b.tar")" "$(realpath "$(dirname "${BASH_SOURCE[0]}")/build/all/lk3rd-revived-$b.tar")"
 			fi
 		fi
 	done
